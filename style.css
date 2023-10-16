@@ -22,7 +22,8 @@ main{
     background: var(--Very-Dark-Blue);
     background-image: url(./images/bg-desktop.png);
     background-size: 100%;
-    background-position-y: 100%;
+    /* background-position-y: 100%; */
+    background-position: bottom;
     background-repeat: no-repeat;
     display: flex;
     align-items: center;
@@ -36,7 +37,9 @@ main{
 }
 .data-storage{
     width: 70%;
-    height: auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
     display: grid;
     grid-template-columns: 1fr 1.5fr;
     column-gap: 2rem;
@@ -159,9 +162,9 @@ main{
         height: 5rem;
         color: var(--Very-Dark-Blue);
         background-color: hsl(0, 0%, 100%);
-        position:absolute;
-        bottom: 27rem;
-        right:10rem;
+        position: relative;
+        bottom: 18rem;
+        left: 26rem;
         transform: translate(-50%, 50%);
         border-radius: 1rem;
         display: flex;
@@ -208,8 +211,10 @@ main{
         @media (max-width:400px){
             width: 10rem;
             height: 4rem;
-            bottom: 15%;
-            left: 50%;
+            position: relative;
+            bottom: 3.5rem;
+            left: 8rem;
+            transform: translate(-50%, 50%);
             border-radius: 0.5rem;
               
           }
